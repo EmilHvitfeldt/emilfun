@@ -1,0 +1,14 @@
+Package: ehlib
+Type: Package
+Title: Personal R pacakge
+Version: 0.1.0
+Author: Emil Hvitfeldt Hansen
+Authors@R: person("Emil", "Hvitfeldt", email = "emilhhvitfeldt@gmail.com", role = c("aut", "cre"))
+Description: Package of personal commonly used R functions.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Depends: dplyr,
+         purrr,
+         stringr
+RoxygenNote: 6.0.1
