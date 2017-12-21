@@ -9,8 +9,8 @@
 #' @export
 one_hot <- function(data, var) {
 
-  var_enquo <- enquo(var)
-  items <- data %>% pull(!!var_enquo)
+  var_enquo <- dplyr::enquo(var)
+  items <- data %>% dplyr::pull(!!var_enquo)
   items_unique <- items %>% unique()
 
   out <- matrix(0, NROW(data), length(items_unique))
@@ -22,5 +22,5 @@ one_hot <- function(data, var) {
 
   data %>%
     select(-!!var_enquo) %>%
-    bind_cols(as.tibble(out))
+    bind_cols(tibble::as.tibble(out))
 }

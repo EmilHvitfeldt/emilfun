@@ -12,3 +12,8 @@ Depends: dplyr,
          purrr,
          stringr
 RoxygenNote: 6.0.1
+Imports: 
+    magrittr,
+    rstudioapi,
+    ggplot2,
+    tibble
