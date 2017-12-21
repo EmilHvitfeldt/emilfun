@@ -8,12 +8,12 @@ Description: Package of personal commonly used R functions.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-Depends: dplyr,
-         purrr,
-         stringr
 RoxygenNote: 6.0.1
 Imports: 
     magrittr,
     rstudioapi,
     ggplot2,
-    tibble
+    tibble,
+    dplyr,
+    purrr,
+    stringr
