@@ -1,0 +1,4 @@
+Name: Insert aligned structure
+Description: Inserts aligned structure at the cursor position.
+Binding: aligned
+Interactive: false
