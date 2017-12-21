@@ -5,6 +5,8 @@
 #'  is provided.
 #'
 #'
+#' @param ... Other arguments passed on to [discrete_scale()] to control name, limits,
+#'   breaks, labels and so forth.
 #' @param values a set of aesthetic values to map data values to. If this
 #'   is a named vector, then the values will be matched based on the names.
 #'   If unnamed, values will be matched in order (usually alphabetical) with

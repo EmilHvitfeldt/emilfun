@@ -21,6 +21,6 @@ one_hot <- function(data, var) {
   }
 
   data %>%
-    select(-!!var_enquo) %>%
-    bind_cols(tibble::as.tibble(out))
+    dplyr::select(-!!var_enquo) %>%
+    dplyr::bind_cols(tibble::as.tibble(out))
 }

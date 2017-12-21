@@ -7,9 +7,10 @@
 #' @export
 #'
 str_between <- function(string, start, end) {
-  str_extract(string, str_c(start, '(.*?)', end, collapse = '')) %>%
-    str_replace(start, "") %>%
-    str_replace(end, "")
+  stringr::str_extract(string,
+                       stringr::str_c(start, '(.*?)', end, collapse = '')) %>%
+    stringr::str_replace(start, "") %>%
+    stringr::str_replace(end, "")
 }
 
 #' Extract all text between two patterns (not including)
@@ -21,7 +22,8 @@ str_between <- function(string, start, end) {
 #' @export
 #'
 str_between_all <- function(string, start, end) {
-  str_extract_all(string, str_c(start, '(.*?)', end, collapse = '')) %>%
+  stringr::str_extract_all(string,
+                           stringr::str_c(start, '(.*?)', end, collapse = '')) %>%
     purrr::map(~ .x %>% str_between(start, end))
 }
 
@@ -33,7 +35,7 @@ str_between_all <- function(string, start, end) {
 #' @export
 #'
 str_before <- function(string, pattern) {
-  str_extract(string, str_c(".+?(?=", pattern, ")"))
+  stringr::str_extract(string, stringr::str_c(".+?(?=", pattern, ")"))
 }
 
 #' Extract text after pattern (not including)
@@ -44,5 +46,5 @@ str_before <- function(string, pattern) {
 #' @export
 #'
 str_after <- function(string, pattern) {
-  str_extract(string, str_c("(?<=", pattern, ").*$"))
+  stringr::str_extract(string, stringr::str_c("(?<=", pattern, ").*$"))
 }
