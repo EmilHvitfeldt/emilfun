@@ -16,4 +16,5 @@ Imports:
     tibble,
     dplyr,
     purrr,
-    stringr
+    stringr,
+    crayon
