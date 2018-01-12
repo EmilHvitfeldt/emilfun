@@ -9,6 +9,8 @@
 #' @param steps the maximum number of steps to be considered. The default is
 #' 1000 (essentially as many as required). It is typically used to stop the
 #' process early.
+#' @param trace Logical. If TRUE prints information of steps taking. Defaults
+#' to TRUE.
 #' @return to be determined
 #' @examples
 #' dataset <- dplyr::mutate(iris,
@@ -22,7 +24,7 @@
 #'
 #'   X <- step_new(object)
 #' @export
-step_new <- function(object, steps = 1000) {
+step_new <- function(object, steps = 1000, trace = TRUE) {
 
   res <- list(starting_model = object)
   models <- list()
@@ -37,10 +39,10 @@ step_new <- function(object, steps = 1000) {
     object <- update(object, paste("~ . -", removeTerm))
     models[[i]] <- object
     formulas[i + 1] <- as.character(formula(object))[3]
-    cat(crayon::blue(removeTerm), " has been ", crayon::red("removed"),
-        ", resulting in the model:\n",
-        formulas[i + 1], "\n",
-        sep = "")
+    if(trace) {
+      cat(crayon::blue(removeTerm), " has been ", crayon::red("removed"),
+        ", resulting in the model:\n", formulas[i + 1], "\n", sep = "")
+    }
 
   }
 
