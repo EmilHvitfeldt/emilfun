@@ -4,7 +4,7 @@
 \alias{step_new}
 \title{Re-imagination of stats::step() function}
 \usage{
-step_new(object, steps = 1000)
+step_new(object, steps = 1000, trace = TRUE)
 }
 \arguments{
 \item{object}{an object representing a model of an appropriate class
@@ -14,6 +14,9 @@ stepwise search.}
 \item{steps}{the maximum number of steps to be considered. The default is
 1000 (essentially as many as required). It is typically used to stop the
 process early.}
+
+\item{trace}{Logical. If TRUE prints information of steps taking. Defaults
+to TRUE.}
 }
 \value{
 to be determined
@@ -23,14 +26,15 @@ This functions aims to add the same functionality as stats::step() with the
 adition to saving intermediate models along with diagnogists.
 }
 \examples{
-dataset <- dplyr::mutate(iris,
-         tan1 = rnorm(n()),
-         tan2 = rnorm(n()),
-         tan3 = rnorm(n()),
-         tan4 = rnorm(n()),
-         tan5 = rnorm(n()))
+dataset <- data_make()
 
-  object <- lm(Sepal.Length ~ ., data = dataset)
+object <- lm(response ~ ., data = dataset)
 
-  X <- step_new(object)
+X <- step_new(object)
+
+dataset <- data_make(n_dependent = 5, n_random = 5, n = 1000)
+
+object <- lm(response ~ ., data = dataset)
+
+X <- step_new(object)
 }

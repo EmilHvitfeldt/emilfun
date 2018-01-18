@@ -2,5 +2,5 @@
 #'
 #' @name ehlib-package
 #' @docType package
-#' @importFrom stats drop1 formula update
+#' @importFrom stats drop1 formula update rnorm runif
 NULL

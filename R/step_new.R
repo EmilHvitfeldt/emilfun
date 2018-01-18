@@ -13,16 +13,17 @@
 #' to TRUE.
 #' @return to be determined
 #' @examples
-#' dataset <- dplyr::mutate(iris,
-#'          tan1 = rnorm(n()),
-#'          tan2 = rnorm(n()),
-#'          tan3 = rnorm(n()),
-#'          tan4 = rnorm(n()),
-#'          tan5 = rnorm(n()))
+#' dataset <- data_make()
 #'
-#'   object <- lm(Sepal.Length ~ ., data = dataset)
+#' object <- lm(response ~ ., data = dataset)
 #'
-#'   X <- step_new(object)
+#' X <- step_new(object)
+#'
+#' dataset <- data_make(n_dependent = 5, n_random = 5, n = 1000)
+#'
+#' object <- lm(response ~ ., data = dataset)
+#'
+#' X <- step_new(object)
 #' @export
 step_new <- function(object, steps = 1000, trace = TRUE) {
 
@@ -38,7 +39,11 @@ step_new <- function(object, steps = 1000, trace = TRUE) {
     removeTerm <- rownames(AICS)[which.min(AICS$AIC)]
     object <- update(object, paste("~ . -", removeTerm))
     models[[i]] <- object
-    formulas[i + 1] <- as.character(formula(object))[3]
+    formulas[i + 1] <- paste0(as.character(formula(object))[2],
+                              " ",
+                              as.character(formula(object))[1],
+                              " ",
+                              as.character(formula(object))[3])
     if(trace) {
       cat(crayon::blue(removeTerm), " has been ", crayon::red("removed"),
         ", resulting in the model:\n", formulas[i + 1], "\n", sep = "")
