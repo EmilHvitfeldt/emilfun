@@ -30,7 +30,7 @@ scale_fill_rep <- function (..., values) {
   pal <- function(n) {
     rep(values, ceiling(n / length(values)))[1:n]
   }
-  discrete_scale(aesthetic = "fill", "manual", pal, ...)
+  ggplot2::discrete_scale(aesthetic = "fill", "manual", pal, ...)
 }
 
 #' @rdname scale_rep
@@ -39,7 +39,7 @@ scale_alpha_rep <- function (..., values) {
   pal <- function(n) {
     rep(values, ceiling(n / length(values)))[1:n]
   }
-  discrete_scale(aesthetic = "alpha", "manual", pal, ...)
+  ggplot2::discrete_scale(aesthetic = "alpha", "manual", pal, ...)
 }
 
 #' @rdname scale_rep
@@ -48,7 +48,7 @@ scale_color_rep <- function (..., values) {
   pal <- function(n) {
     rep(values, ceiling(n / length(values)))[1:n]
   }
-  discrete_scale(aesthetic = "colour", "manual", pal, ...)
+  ggplot2::discrete_scale(aesthetic = "colour", "manual", pal, ...)
 }
 
 #' @rdname scale_rep
@@ -57,7 +57,7 @@ scale_colour_rep <- function (..., values) {
   pal <- function(n) {
     rep(values, ceiling(n / length(values)))[1:n]
   }
-  discrete_scale(aesthetic = "colour", "manual", pal, ...)
+  ggplot2::discrete_scale(aesthetic = "colour", "manual", pal, ...)
 }
 
 #' @rdname scale_rep
@@ -66,7 +66,7 @@ scale_linetype_rep <- function (..., values) {
   pal <- function(n) {
     rep(values, ceiling(n / length(values)))[1:n]
   }
-  discrete_scale(aesthetic = "linetype", "manual", pal, ...)
+  ggplot2::discrete_scale(aesthetic = "linetype", "manual", pal, ...)
 }
 
 #' @rdname scale_rep
@@ -75,7 +75,7 @@ scale_shape_rep <- function (..., values) {
   pal <- function(n) {
     rep(values, ceiling(n / length(values)))[1:n]
   }
-  discrete_scale(aesthetic = "shape", "manual", pal, ...)
+  ggplot2::discrete_scale(aesthetic = "shape", "manual", pal, ...)
 }
 
 #' @rdname scale_rep
@@ -84,5 +84,5 @@ scale_size_rep <- function (..., values) {
   pal <- function(n) {
     rep(values, ceiling(n / length(values)))[1:n]
   }
-  discrete_scale(aesthetic = "size", "manual", pal, ...)
+  ggplot2::discrete_scale(aesthetic = "size", "manual", pal, ...)
 }

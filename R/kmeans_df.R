@@ -9,7 +9,7 @@
 #' @param \dots Additional arguments to be passed to the kmeans function.
 #' @return an object of class "kmeans".
 #' @examples
-#' kmeans_df(~., cars, centers = 2)
+#' kmeans_df(cars, ~ ., centers = 2)
 #' @export
 kmeans_df <- function(data, formula, ...) {
   data_mat <- as.matrix(model.frame(formula, data))

@@ -22,5 +22,5 @@ This function is a simple wrapper that lets you work with \code{kmeans()}
 while using data.frame, thus allowing you to stay with the same format.
 }
 \examples{
-kmeans_df(~., cars, centers = 2)
+kmeans_df(cars, ~ ., centers = 2)
 }
