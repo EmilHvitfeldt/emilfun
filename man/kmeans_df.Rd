@@ -4,13 +4,13 @@
 \alias{kmeans_df}
 \title{kmeans function that takes a data.frame and a formula as inputs}
 \usage{
-kmeans_df(formula, data, ...)
+kmeans_df(data, formula, ...)
 }
 \arguments{
+\item{data}{A data.frame.}
+
 \item{formula}{an object of class \code{"\link{formula}"} (or one that
 can be coerced to that class)}
-
-\item{data}{A data.frame.}
 
 \item{\dots}{Additional arguments to be passed to the kmeans function.}
 }
