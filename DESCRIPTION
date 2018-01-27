@@ -1,7 +1,7 @@
 Package: ehlib
 Type: Package
 Title: Personal R pacakge
-Version: 0.2.1
+Version: 0.2.2
 Author: Emil Hvitfeldt Hansen
 Authors@R: person("Emil", "Hvitfeldt", email = "emilhhvitfeldt@gmail.com", role = c("aut", "cre"))
 Description: Package of personal commonly used R functions.
