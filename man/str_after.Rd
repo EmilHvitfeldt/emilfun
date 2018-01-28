@@ -7,7 +7,7 @@
 str_after(string, pattern)
 }
 \arguments{
-\item{string}{A number. Input vector.}
+\item{string}{A character vector. Input vector.}
 
 \item{pattern}{Pattern to match after.}
 }

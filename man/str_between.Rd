@@ -7,7 +7,7 @@
 str_between(string, start, end)
 }
 \arguments{
-\item{string}{A number. Input vector.}
+\item{string}{A character vector. Input vector.}
 
 \item{start}{Pattern to match after.}
 
