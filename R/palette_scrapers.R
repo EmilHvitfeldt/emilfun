@@ -6,11 +6,11 @@
 #' palette_color_hex("http://www.color-hex.com/color-palette/185")
 #' @export
 palette_color_hex <- function(url) {
-  read_html(url) %>%
-    html_nodes('table') %>%
-    html_table() %>%
+  xml2::read_html(url) %>%
+    rvest::html_nodes('table') %>%
+    rvest::html_table() %>%
     .[[1]] %>%
-    pull(Hex)
+    dplyr::pull("Hex")
 }
 
 #' Scrapes color palette from coolors.co
@@ -21,10 +21,10 @@ palette_color_hex <- function(url) {
 #' palette_coolors("https://coolors.co/app/05668d-028090-00a896-02c39a-f0f3bd")
 #' @export
 palette_coolors <- function(url) {
-  str_extract(url, "([^/]+$)") %>%
-    str_split("-") %>%
+  stringr::str_extract(url, "([^/]+$)") %>%
+    stringr::str_split("-") %>%
     unlist() %>%
-    str_c("#", .)
+    stringr::str_c("#", .)
 }
 
 
