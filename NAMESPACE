@@ -3,6 +3,7 @@
 export("%>%")
 export(aligned)
 export(data_make)
+export(google_hits)
 export(kmeans_df)
 export(one_hot)
 export(palette_color_hex)

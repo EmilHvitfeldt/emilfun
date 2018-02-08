@@ -19,4 +19,6 @@ Imports:
     stringr,
     crayon,
     rvest,
-    xml2
+    xml2,
+    glue,
+    readr
