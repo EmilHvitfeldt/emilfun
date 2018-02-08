@@ -6,10 +6,13 @@
 #' @param data A data.frame.
 #' @param formula an object of class \code{"\link{formula}"} (or one that
 #' can be coerced to that class)
-#' @param \dots Additional arguments to be passed to the kmeans function.
+#' @param \dots Additional arguments to be passed to the
+#' \code{\link[stats]{kmeans}} function.
 #' @return an object of class "kmeans".
 #' @examples
 #' kmeans_df(cars, ~ ., centers = 2)
+#'
+#' kmeans_df(iris, ~ Sepal.Length + Sepal.Width, centers = 3)
 #' @export
 kmeans_df <- function(data, formula, ...) {
   data_mat <- as.matrix(model.frame(formula, data))

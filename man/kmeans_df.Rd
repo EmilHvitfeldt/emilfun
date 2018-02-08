@@ -12,7 +12,8 @@ kmeans_df(data, formula, ...)
 \item{formula}{an object of class \code{"\link{formula}"} (or one that
 can be coerced to that class)}
 
-\item{\dots}{Additional arguments to be passed to the kmeans function.}
+\item{\dots}{Additional arguments to be passed to the
+\code{\link[stats]{kmeans}} function.}
 }
 \value{
 an object of class "kmeans".
@@ -23,4 +24,6 @@ while using data.frame, thus allowing you to stay with the same format.
 }
 \examples{
 kmeans_df(cars, ~ ., centers = 2)
+
+kmeans_df(iris, ~ Sepal.Length + Sepal.Width, centers = 3)
 }

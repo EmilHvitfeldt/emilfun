@@ -17,3 +17,9 @@ A character vector.
 \description{
 Extract text before pattern (not including)
 }
+\examples{
+string <- "This is a test string where we do the testing."
+
+str_before(string, "where")
+str_before(string, "test")
+}

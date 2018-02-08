@@ -19,3 +19,10 @@ A named list.
 \description{
 Split a vector into a list
 }
+\examples{
+split_list(1:100, 2)
+
+split_list(1:100, 11)
+
+split_list(1:100, max = 11)
+}

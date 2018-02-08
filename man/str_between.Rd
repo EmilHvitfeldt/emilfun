@@ -4,7 +4,7 @@
 \alias{str_between}
 \title{Extract first text between two patterns (not including)}
 \usage{
-str_between(string, start, end)
+str_between(string, start, end, rm.ws = FALSE)
 }
 \arguments{
 \item{string}{A character vector. Input vector.}
@@ -12,10 +12,21 @@ str_between(string, start, end)
 \item{start}{Pattern to match after.}
 
 \item{end}{Pattern to match before.}
+
+\item{rm.ws}{Removed leading and trailing white space if TRUE.}
 }
 \value{
 A character vector.
 }
 \description{
-Extract first text between two patterns (not including)
+Extracts the whatever happens after "start", and the first occurence of
+"end" after that. White space can be removed using the rm.ws argument.
+}
+\examples{
+string <- "This is a test string where we do the testing."
+
+str_between(string, "where", "the")
+
+str_between(string, "where", "the", TRUE)
+str_between(string, "where", "the", rm.ws = TRUE)
 }

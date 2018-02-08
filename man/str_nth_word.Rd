@@ -19,3 +19,13 @@ A character vector.
 \description{
 Fairly rough function. Ideal to work with n-grams.
 }
+\details{
+The parameter n must be of length 1 for function to work. For multiple words
+please run function multiple times.
+}
+\examples{
+string <- "This is a test string where we do the testing."
+
+str_nth_word(string, 4)
+str_nth_word(string, 6)
+}

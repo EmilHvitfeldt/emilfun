@@ -17,3 +17,10 @@ A character vector.
 \description{
 Extract after last
 }
+\examples{
+string <- "This is a test string where we do the testing."
+
+str_after_last(string, "where")
+str_after_last(string, "test")
+str_after_last(string, " ")
+}

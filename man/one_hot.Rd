@@ -16,7 +16,9 @@ A data.frame or tibble with the catagorical variable replaced with
  an one hot representation.
 }
 \description{
-Transform a catagorical variable to one hot representation
+The one hot representation is analogous to factors in the sense that each
+value of the catagorical variable have its own logical vector that is 1
+when present and 0 when it isn't.
 }
 \examples{
 one_hot(iris, Species)

@@ -17,3 +17,9 @@ A character vector.
 \description{
 Extract text after pattern (not including)
 }
+\examples{
+string <- "This is a test string where we do the testing."
+
+str_after(string, "where")
+str_after(string, "test")
+}
