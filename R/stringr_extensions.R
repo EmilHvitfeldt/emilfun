@@ -23,7 +23,7 @@ str_between <- function(string, start, end, rm.ws = FALSE) {
     stringr::str_replace(start, "") %>%
     stringr::str_replace(end, "")
 
-  if(rm_ws) {
+  if(rm.ws) {
     out <- trimws(out)
   }
   out
