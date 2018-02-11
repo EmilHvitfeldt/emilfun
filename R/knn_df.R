@@ -21,16 +21,16 @@
 #' knn_df(data, Species ~ Sepal.Length + Sepal.Width, split, k = 5, prob = TRUE)
 #' @export
 knn_df <- function(data, formula, split, ...) {
-  quo_split <- enquo(split)
+  quo_split <- dplyr::enquo(split)
 
   formula_obj <- as.character(formula)
   train <- model.frame(formula(paste("~", formula_obj[3])),
-                       filter(data, !!quo_split))
+                       dplyr::filter(data, !!quo_split))
   test <- model.frame(formula(paste("~", formula_obj[3])),
-                      filter(data, !(!!quo_split)))
+                      dplyr::filter(data, !(!!quo_split)))
   cl <- data %>%
-    filter(!!quo_split) %>%
-    pull(formula_obj[2])
+    dplyr::filter(!!quo_split) %>%
+    dplyr::pull(formula_obj[2])
 
   class::knn(train = train, test = test, cl = cl, ...)
 }
