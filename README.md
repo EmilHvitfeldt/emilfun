@@ -10,7 +10,7 @@ This is my [personal R package](https://hilaryparker.com/2013/04/03/personal-r-p
 Installation
 ------------
 
-You can install ehlib from github with:
+You can install **ehlib** from github with:
 
 ``` r
 # install.packages("devtools")
