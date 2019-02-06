@@ -1,4 +1,5 @@
 #' knns function from class that takes a data.frame and a formula as inputs
+#' knns function from class that takes a data.frame and a formula as inputs
 #'
 #' This function is a simple wrapper that lets you work with \code{class::knns()}
 #' while using data.frame, thus allowing you to stay with the same format.

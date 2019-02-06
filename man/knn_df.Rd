@@ -2,7 +2,8 @@
 % Please edit documentation in R/knn_df.R
 \name{knn_df}
 \alias{knn_df}
-\title{knns function from class that takes a data.frame and a formula as inputs}
+\title{knns function from class that takes a data.frame and a formula as inputs
+knns function from class that takes a data.frame and a formula as inputs}
 \usage{
 knn_df(data, formula, split, ...)
 }
