@@ -5,7 +5,7 @@ author: "Emil Hvitfeldt"
 date: "2019-1-29 (Change this date)"
 output:
   xaringan::moon_reader:
-    css: ["default", "theme.css", "colors.css"]
+    css: ["default", "theme.css", "colors.css", "text-sizing.css"]
     lib_dir: libs
     nature:
       beforeInit: "macros.js"
@@ -57,4 +57,11 @@ opts_chunk$set(
   out.width = "700px")
 ```
 
+# This is the first title 
+
 Adding some text
+
+```{r}
+11 + 2 + 4
+```
+
