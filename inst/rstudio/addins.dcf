@@ -7,3 +7,8 @@ Name: No more conflicts
 Description: Inserts package:: before all function calls.
 Binding: conflict_not
 Interactive: false
+
+Name: Turn text to slugs
+Description: Replaces text with slug friendly text.
+Binding: slugify
+Interactive: false
