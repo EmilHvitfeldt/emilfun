@@ -5,7 +5,7 @@ author: "Emil Hvitfeldt"
 date: "2019-1-29 (Change this date)"
 output:
   xaringan::moon_reader:
-    css: ["default", "theme.css", "colors.css", "text-sizing.css"]
+    css: ["theme.css"]
     lib_dir: libs
     nature:
       beforeInit: "macros.js"
@@ -57,6 +57,11 @@ opts_chunk$set(
   out.width = "700px")
 ```
 
+```{r, echo = FALSE}
+library(sass)
+sass(sass_file("theme.sass"), output = "theme.css")
+```
+
 # This is the first title 
 
 Adding some text
@@ -65,3 +70,22 @@ Adding some text
 11 + 2 + 4
 ```
 
+Lorem ipsum dolor sit amet, *consectetur* adipiscing elit
+
+Lorem ipsum dolor sit amet, **consectetur** adipiscing elit
+
+Lorem ipsum dolor sit amet, ~~consectetur~~ adipiscing elit
+
+> Lorem ipsum dolor sit amet, consectetur adipiscing elit
+
+---
+
+# This is h1
+
+## This is h2
+
+### This is h3
+
+#### This is h4
+
+##### This is h5
