@@ -8,7 +8,7 @@ Description: Package of personal commonly used R functions.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.1.1
+RoxygenNote: 7.0.2
 Imports: 
     magrittr,
     rstudioapi,
@@ -20,7 +20,10 @@ Imports:
     rvest,
     xml2,
     glue,
-    readr
+    readr,
+    magick,
+    fs,
+    here
 Suggests: 
     class,
     tidyr,

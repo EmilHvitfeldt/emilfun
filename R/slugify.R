@@ -7,6 +7,7 @@ slugify <- function() {
 
   ctx <- rstudioapi::getActiveDocumentContext()
 
+  return(invisible())
   if (!is.null(ctx)) {
     selected_text <- ctx$selection[[1]]$text
 

@@ -5,5 +5,6 @@ test_that("returns valid type when n = 0", {
 })
 
 test_that("doesn't return any zeros", {
+  set.seed(5)
   expect_false(any(rztpois(1000, lambda = 0.001) == 0))
 })

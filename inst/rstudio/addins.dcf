@@ -12,3 +12,9 @@ Name: Turn text to slugs
 Description: Replaces text with slug friendly text.
 Binding: slugify
 Interactive: false
+
+Name: Github style emoji
+Description: Convert colon emojis to emojies
+Binding: github_emoji
+Interactive: false
+
