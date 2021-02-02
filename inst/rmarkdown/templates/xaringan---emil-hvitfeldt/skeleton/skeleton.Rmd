@@ -5,7 +5,7 @@ author: "Emil Hvitfeldt"
 date: "2019-1-29 (Change this date)"
 output:
   xaringan::moon_reader:
-    css: ["theme.css"]
+    css: ["theme.css", "default"]
     lib_dir: libs
     nature:
       beforeInit: "macros.js"
@@ -51,6 +51,7 @@ knit_hooks$set(output = function(x, options) {
 
 opts_chunk$set(
   echo = TRUE,
+  dpi = 300,
   fig.width = 7, 
   fig.align = 'center',
   fig.asp = 0.618, # 1 / phi
