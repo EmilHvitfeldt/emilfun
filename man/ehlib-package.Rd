@@ -2,8 +2,14 @@
 % Please edit documentation in R/ehlib-package.R
 \docType{package}
 \name{ehlib-package}
+\alias{ehlib}
 \alias{ehlib-package}
-\title{A package to create tetris chart visualizations in R}
+\title{ehlib: Personal R pacakge}
 \description{
-A package to create tetris chart visualizations in R
+Package of personal commonly used R functions.
 }
+\author{
+\strong{Maintainer}: Emil Hvitfeldt \email{emilhhvitfeldt@gmail.com}
+
+}
+\keyword{internal}

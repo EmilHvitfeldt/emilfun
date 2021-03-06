@@ -1,6 +1,8 @@
-#' A package to create tetris chart visualizations in R
-#'
-#' @name ehlib-package
-#' @docType package
-#' @importFrom stats drop1 formula update rnorm runif kmeans model.frame
+#' @keywords internal
+"_PACKAGE"
+
+# The following block is used by usethis to automatically manage
+# roxygen namespace tags. Modify with care!
+## usethis namespace: start
+## usethis namespace: end
 NULL
