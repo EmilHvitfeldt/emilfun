@@ -17,6 +17,7 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/EmilHvitfeldt/ehlib/workflows/R-CMD-check/badge.svg)](https://github.com/EmilHvitfeldt/ehlib/actions)
+[![emilverse](https://img.shields.io/badge/emilverse-packages-blue.svg)](http://github.com/emilhvitfeldt/emilverse)
 <!-- badges: end -->
 
 This is my [personal R package](https://hilaryparker.com/2013/04/03/personal-r-packages/) where I gather the various [R](https://www.r-project.org/) functions I have found useful in one place. 
