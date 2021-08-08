@@ -1,4 +1,4 @@
 library(testthat)
-library(ehlib)
+library(emilfun)
 
-test_check("ehlib")
+test_check("emilfun")
