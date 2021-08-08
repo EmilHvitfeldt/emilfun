@@ -10,7 +10,7 @@ palette_color_hex <- function(url) {
     rvest::html_nodes('table') %>%
     rvest::html_table() %>%
     .[[1]] %>%
-    dplyr::pull("Hex")
+    .[["Hex"]]
 }
 
 #' Scrapes color palette from coolors.co

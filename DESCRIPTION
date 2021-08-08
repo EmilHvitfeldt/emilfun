@@ -11,20 +11,9 @@ LazyData: true
 RoxygenNote: 7.1.1.9001
 Imports: 
     magrittr,
-    rstudioapi,
     ggplot2,
-    tibble,
-    dplyr,
-    purrr,
     stringr,
     rvest,
-    xml2,
-    glue,
-    readr,
-    magick,
-    fs,
-    here
+    xml2
 Suggests: 
-    class,
-    tidyr,
     testthat
